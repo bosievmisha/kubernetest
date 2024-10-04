@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-service
+spec:
+  selector:
+    app: test
+  type: LoadBalancer             # Конфигурация нашего кластера
+  ports:
+    - port: 80                   # Порт сервиса
+      targetPort: 80             # Порт приложения в контейнере
